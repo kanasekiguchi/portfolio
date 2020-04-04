@@ -1,5 +1,8 @@
 # portfolio
 
+## portfolio url
+https://kanasekiguchi1009.web.app
+
 ## Project setup
 ```
 npm install
