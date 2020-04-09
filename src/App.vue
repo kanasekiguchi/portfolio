@@ -28,13 +28,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-familiy: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialised;
-  -moz-osx-font-smoothin: grayscal;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
