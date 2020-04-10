@@ -1,8 +1,14 @@
 <template>
- <div class="aboutSection">
-  <div class="aboutTitle">aboutExplain</div>
-  <div class="aboutExplain">説明文</div>
- </div>
+  <div class="aboutSection">
+    <div class="aboutTitlle">
+      About Me
+    </div>
+    <div class="aboutExplain">
+      千葉県出身の新卒１年目。都内の大学で社会学を学びIT業界に興味を持つ。
+      大学時代は、日々アルバイトに勤しみカフェ、ビアガーデン、バルなどで働き様々な人と関わることの楽しさを学んだ。
+      就職活動時にたまたま参加したシアトルの説明会で
+    </div>
+  </div>
 </template>
 
 
@@ -11,15 +17,28 @@
 
 
 <style scoped>
-.aboutSection{
-    background-color: #F5F5F5;
-    width: 100%;
-    height: auto;
-    text-align: center;
+.aboutSection {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
 
-.aboutTitle{
-    
-
+.aboutTitlle {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+  text-shadow: 1px 2px 3px #808080;
+  background-color: #67a5b3;
 }
+
+.aboutExplain {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+  width: 80%;
+  word-wrap: break-word;
+  line-height: 1.25em;
+  margin: 0 auto;
+}
+
 </style>
