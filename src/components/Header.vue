@@ -1,10 +1,23 @@
 <template>
   <div id="headerSection">
-    <button @click="toggle" class="btn-1">
-      <img class="headerButton" alt="menu" src="@/assets/menu3.png">
+    <button
+      class="btn-1"
+      @click="toggle"
+    >
+      <img
+        class="headerButton"
+        alt="menu"
+        src="@/assets/menu3.png"
+      >
     </button>
-    <Drawer @close="toggle" align="left" :closeable="true">
-      <div v-if="open">content here</div>
+    <Drawer
+      align="left"
+      :closeable="true"
+      @close="toggle"
+    >
+      <div v-if="open">
+        content here
+      </div>
     </Drawer>
   </div>
 </template>
@@ -31,22 +44,23 @@ export default {
 </script>
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap-reboot",
-"~bootstrap/scss/buttons";
+  "~bootstrap/scss/buttons";
 </style>
 
 
 <style>
 #headerSection {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   width: 100%;
   height: auto;
 }
-.headerButton{
+
+.headerButton {
   height: 30pt;
   width: 30pt;
 }
 
-.btn-1{
-  background-color: #f3f3f3
+.btn-1 {
+  background-color: #f3f3f3;
 }
 </style>

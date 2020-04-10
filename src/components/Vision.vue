@@ -1,6 +1,8 @@
 <template>
   <div class="vision">
-    <p class="vision_k">Vision</p>
+    <p class="vision_k">
+      Vision
+    </p>
   </div>
 </template>
 
@@ -9,5 +11,3 @@
 </script>
 
 
-<style scoped>
-</style>

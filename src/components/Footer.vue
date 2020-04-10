@@ -1,10 +1,7 @@
 <template>
- <div class="footer">
- </div>
+  <div class="footer" />
 </template>
 
 <script>
 </script>
 
-<style scoped>
-</style>
