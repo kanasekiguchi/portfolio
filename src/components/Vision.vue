@@ -26,6 +26,8 @@
   font-weight: bold;
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .visionExplain {
@@ -33,5 +35,7 @@
   font-size: 12pt;
   word-wrap: break-word;
   line-height: 1.25em;
+  margin: 0 auto;
+  padding: 70px;
 }
 </style>

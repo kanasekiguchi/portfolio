@@ -1,5 +1,15 @@
 <template>
   <div class="footerSection">
+    <a
+      href="#header"
+      @click="clickSmoothScroll()"
+    >
+      <img
+        class="footerScroll"
+        alt="Footer"
+        src="@/assets/yazirushi.png"
+      >
+    </a>
     <div class="footerCopyright">
       ©️ SeattleConsulting
     </div>
@@ -7,6 +17,20 @@
 </template>
 
 <script>
+export default {
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#headerSection'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -22,5 +46,12 @@
   font-weight: bold;
   font-size: 12pt;
   text-shadow: 1px 2px 3px #808080;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.footerScroll {
+  height: 20pt;
+  width: 20pt;
 }
 </style>

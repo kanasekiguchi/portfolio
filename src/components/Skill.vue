@@ -29,6 +29,8 @@
   font-weight: bold;
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .skillExplain {
@@ -38,11 +40,14 @@
   line-height: 1.25em;
   margin: 0 auto;
   width: 80%;
+  padding: 75px;
 }
 
 .gitHubLabel {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 </style>
