@@ -29,7 +29,8 @@
   font-weight: bold;
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
-  background-color: #67a5b3;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .aboutExplain {
@@ -39,6 +40,7 @@
   word-wrap: break-word;
   line-height: 1.25em;
   margin: 0 auto;
+  padding: 50px;
 }
 
 </style>

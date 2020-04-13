@@ -8,3 +8,7 @@ new Vue({
 }).$mount('#app')
 
 import './assets/css/reset.css'
+
+import smoothScroll from 'vue-smoothscroll'
+Vue.use(smoothScroll)
+
