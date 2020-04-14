@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import Menu from './Menu.vue'
-export default {
+ import Menu from './Menu.vue'
+ export default {
   name: 'App',
   _components: {
     Menu
@@ -41,12 +41,13 @@ export default {
 }
 
 </script>
+
 <style scoped>
 /* ヘッダーまわりはサイトに合わせて調整してください */
 #headerSection {
   background-color: #f3f3f3;
   width: 100%;
-  height: auto;
+  height: 35px;
 }
 
 #nav-drawer {
@@ -131,6 +132,7 @@ export default {
 }
 
 .headerButton {
-  width: 25px;
+  width: 34px;
 }
+
 </style>
