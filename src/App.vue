@@ -4,6 +4,7 @@
     <Main />
     <About />
     <Skill />
+    <Chart />
     <Vision />
     <Footer />
   </div>
@@ -14,6 +15,7 @@ import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Skill from './components/Skill.vue'
+import Chart from './components/Chart.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
 export default {
@@ -23,6 +25,7 @@ export default {
     Main,
     About,
     Skill,
+    Chart,
     Vision,
     Footer,
   }

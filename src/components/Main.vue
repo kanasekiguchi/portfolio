@@ -24,6 +24,7 @@
   height: auto;
   line-height: 2em;
   margin: 0 auto;
+  text-align: center;
 }
 
 .userName {
@@ -32,7 +33,6 @@
   text-shadow: 1px 2px 3px #808080;
   display: inline-block;
   border-bottom: 1px solid #9c9797;
-  text-align: center;
   margin: 0 auto;
   padding: 10px;
 }
@@ -41,7 +41,6 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
-  text-align: center;
   margin: 0 auto;
   padding: 10px;
 }

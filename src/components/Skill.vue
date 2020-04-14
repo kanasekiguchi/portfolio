@@ -10,10 +10,57 @@
       <label class="gitHubLabel">gitHub：</label>
       <a href="https://github.com/kanasekiguchi">https://github.com/kanasekiguchi</a>
     </div>
+    <a id="skillCategories" />
+    <div class="skillList" />
+    <li id="skillName">
+      Front-end
+    </li>
+    <li id="skillName">
+      Back-end
+    </li>
+    <li id="skillName">
+      DevOps
+    </li><br>
+    <li id="skillName2">
+      HTML
+    </li>
+    <li id="skillName2">
+      CSS
+    </li>
+    <li id="skillName2">
+      Java
+    </li><br>
+    <li id="skillName2">
+      SCSS
+    </li>
+    <li id="skillName2">
+      Vue
+    </li>
+    <li id="skillName2">
+      Java
+    </li>
+    <li id="skillName2">
+      Ruby
+    </li><br>
+
+    <div class="skillGraph" />
   </div>
 </template>
 
 <script>
+ import Chart from './Chart.vue'
+ export default {
+  name: 'App',
+  _components: {
+    Chart
+  },
+  get components() {
+    return this._components
+  },
+  set components(value) {
+    this._components=value
+  },
+}
 </script>
 
 <style scoped>
@@ -47,6 +94,17 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
   margin: 0 auto;
+  padding: 15px;
+  line-height: 10em;
+}
+
+#skillName {
+  display: inline;
+  padding: 15px;
+}
+
+#skillName2 {
+  display: inline;
   padding: 15px;
 }
 
