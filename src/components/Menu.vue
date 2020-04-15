@@ -1,10 +1,12 @@
 <template>
   <div class="drawerSection">
-    <img
-      class="drawerButton"
-      alt="drawer_close"
-      src="@/assets/drawerclose.png"
-    >
+    <label for="nav-input">
+      <img
+        class="drawerButton"
+        alt="drawer_close"
+        src="@/assets/drawerclose.png"
+      >
+    </label>
     <ul class="drawerMenuSection">
       <li id="drawerMenuItem">
         <a

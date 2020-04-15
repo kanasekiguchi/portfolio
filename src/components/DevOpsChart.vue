@@ -1,4 +1,3 @@
-
 <script>
 import { Radar } from 'vue-chartjs';
 
@@ -8,11 +7,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
         datasets: [
           {
             label: 'Radar Dataset',
-            data: [10, 20, 30, 40, 50, 30],
+            data: [27, 20, 20, 25, 15],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',

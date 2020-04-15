@@ -4,7 +4,9 @@
       Vision
     </div>
     <div class="visionExplain">
-      あああああああああ
+      まずはSEとして経験を積みたいと考えています。
+      その後は、営業や人事などに職種を変えることでSEで得た学びを生かしていきたいです。
+      幅広い知識をつけ、少しでも多くの知識を持った人材になっていくことが現在の夢です。
     </div>
   </div>
 </template>
@@ -36,6 +38,6 @@
   word-wrap: break-word;
   line-height: 1.25em;
   margin: 0 auto;
-  padding: 70px;
+  padding: 100px;
 }
 </style>
