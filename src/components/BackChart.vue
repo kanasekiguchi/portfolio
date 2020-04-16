@@ -7,16 +7,16 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRalls', 'MySQL',''],
+        labels: ['Java', 'Ruby', 'RubyOnRalls', 'MySQL'],
         datasets: [
           {
             label: 'Radar Dataset',
-            data: [15, 15, 30, 15, 0],
+            data: [15, 15, 30, 15],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
+              'rgba(15, 145, 60, 0.2)',
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)',
+              'rgba(15, 145, 60, 1)',
             ],
             borderWidth: 1
           }
@@ -29,6 +29,9 @@ export default {
             max: 50,
             min: 0
           }
+        },
+        legend: {
+          display: false,
         }
       }
     }

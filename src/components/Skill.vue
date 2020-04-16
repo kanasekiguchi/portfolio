@@ -4,11 +4,21 @@
       Skill Set
     </div>
     <div class="skillExplain">
-      <p>あああああああああああああああ</p>
+      <p>
+        技術・知識ともにまだまだで、自らの実力不足を痛感していますが、<br>「驕らず倦まず怠らず」
+        の三つを大事にして頑張ります！<br>
+        自分が作ったもので人を笑顔にしたいし、幸せにしたいです。<br>
+        今はチャートの形も小さく歪ですが、ここから大きく綺麗なチャートを目指し努力していきます。
+        HTMLやCSSは個人的に興味があるので少しだけ数値を高めに設定しました！<br>
+        また、ポートフォリオを作成している中でデザインにも興味が湧いてきました。
+      </p>
     </div>
     <div>
-      <label class="gitHubLabel">gitHub：</label>
-      <a href="https://github.com/kanasekiguchi">https://github.com/kanasekiguchi</a>
+      <label class="gitHubLabel">GitHub：</label>
+      <a
+        class="gitHuburl"
+        href="https://github.com/kanasekiguchi"
+      >https://github.com/kanasekiguchi</a>
     </div>
     <div class="skillCategories">
       <ul>
@@ -60,10 +70,10 @@
         :class="{'devops-Change': devchange}"
       >
         <li>Linux</li>
+        <li>Node</li>
         <li>Git</li>
         <li>GitHub</li>
         <li>Firebase</li>
-        <li>AWS</li>
       </ul>
     </div>
     <div class="skillGraph">
@@ -79,7 +89,12 @@
       >
         <BackChart />
       </div>
-      <div><DevOpsChart /></div>
+      <div
+        v-if="devchange"
+        id="Graph"
+      >
+        <DevOpsChart />
+      </div>
     </div>
   </div>
 </template>
@@ -99,17 +114,25 @@
   },
   data() {
     return {
-      Front_end: true
+      Front_end: true,
+      Back_end: false,
+      devchange: false,
     }
   },
   methods: {
     frontChange(){
-      this.Front_end=!this.Front_end
+      this.Front_end=!this.Front_end,
+      this.Back_end= false,
+      this.devchange=false
     },
     backChange(){
-      this.Back_end=!this.Back_end
+      this.Front_end= false,
+      this.Back_end=!this.Back_end,
+      this.devchange=false
     },
     devChange(){
+      this.Front_end= false,
+      this.Back_end= false,
       this.devchange=!this.devchange
     }
   }
@@ -135,41 +158,43 @@ li {
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 .skillExplain {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
   word-wrap: break-word;
-  line-height: 1.25em;
+  line-height: 1.8em;
   margin: 0 auto;
-  width: 80%;
-  padding: 75px;
+  padding: 0 20px;
+  width: 700px;
 }
 
 .gitHubLabel {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 12pt;
+  font-weight: bold;
+  color: rgb(99, 79, 97);
   margin: 0 auto;
-  padding: 15px;
-  line-height: 10em;
+  padding: 5px;
+  line-height: 5em;
+}
+
+.gitHuburl {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: bold;
+  color: rgb(99, 79, 97);
+  text-decoration: none;
 }
 
 .skillCategories {
+  font-weight: bold;
   padding: 20px;
 }
 
-.front-Change {
-  display: none;
-}
-
-.back-Change {
-  display: none;
-}
-
-.devops-Change {
-  display: none;
+.skillList {
+  padding: 0 0 2px;
 }
 
 .Front {
@@ -193,34 +218,47 @@ li {
   padding: 20px;
 }
 
+.front-Change li {
+  background-color: rgba(255, 0, 0, 0.23);
+}
+
+.back-Change li {
+  background-color: rgba(15, 145, 60, 0.23);
+}
+
+.devops-Change li {
+  background-color: rgba(115, 51, 155, 0.23);
+}
+
 #Front-end li {
   color: rgba(255, 0, 0, 0.75);
   font-size: 10pt;
-  height: 20px;
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   margin: 2px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 3px gray;
 }
 
 #Back-end li {
   color: rgba(15, 145, 60, 0.75);
   font-size: 10pt;
-  height: 20px;
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   margin: 2px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 3px gray;
 }
 
 #DevOps li {
   color: rgba(115, 51, 155, 0.75);
   font-size: 10pt;
-  height: 20px;
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   margin: 2px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 3px gray;
 }
 
+#Graph {
+  margin: 40px auto;
+  width: 300px;
+}
 </style>

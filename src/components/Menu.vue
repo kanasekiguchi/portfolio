@@ -7,7 +7,10 @@
         src="@/assets/drawerclose.png"
       >
     </label>
-    <ul class="drawerMenuSection">
+    <ul
+      class="drawerMenuSection"
+      @click="closeMenu"
+    >
       <li id="drawerMenuItem">
         <a
           class="drawerMenuItemLink"
@@ -43,6 +46,9 @@
 <script>
 export default {
   methods: {
+    closeMenu(){
+      this.$emit('close')
+    },
     clickSmoothScroll1 () {
       event.preventDefault()
       this.$SmoothScroll(
@@ -106,6 +112,8 @@ export default {
   width: 100%;
   height: 731pt;
   text-align: center;
+  font-weight: bold;
+  font-size: 60pt;
 }
 
 .drawerMenuItem {
@@ -117,7 +125,7 @@ export default {
 .drawerMenuItemLink {
   color: #707070;
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   white-space: nowrap;
   line-height: 3em;
   text-decoration: none;

@@ -20,7 +20,7 @@
 <style scoped>
 .mainSection {
   width: 100%;
-  background: linear-gradient(#ffe4e1, #fff0f5);
+  background: linear-gradient(#fff0f5, #ffe4e1);
   height: auto;
   line-height: 2em;
   margin: 0 auto;

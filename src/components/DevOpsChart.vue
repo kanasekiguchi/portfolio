@@ -13,10 +13,10 @@ export default {
             label: 'Radar Dataset',
             data: [27, 20, 20, 25, 15],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
+              'rgba(115, 51, 155, 0.2)',
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)',
+              'rgba(115, 51, 155, 1)',
             ],
             borderWidth: 1
           }
@@ -29,6 +29,9 @@ export default {
             max: 50,
             min: 0
           }
+        },
+        legend: {
+          display: false,
         }
       }
     }

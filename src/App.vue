@@ -30,5 +30,9 @@ export default {
 </script>
 
 <style>
+#app {
+  overflow: hidden;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 </style>
