@@ -67,8 +67,18 @@
       </ul>
     </div>
     <div class="skillGraph">
-      <div><FrontChart /></div>
-      <div><BackChart /></div>
+      <div
+        v-if="Front_end"
+        id="Graph"
+      >
+        <FrontChart />
+      </div>
+      <div
+        v-if="Back_end"
+        id="Graph"
+      >
+        <BackChart />
+      </div>
       <div><DevOpsChart /></div>
     </div>
   </div>
