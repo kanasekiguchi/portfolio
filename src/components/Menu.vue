@@ -98,6 +98,7 @@ export default {
 
 <style scoped>
 .drawerButton {
+  cursor: pointer;
   width: 20px;
 }
 

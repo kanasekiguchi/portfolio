@@ -39,6 +39,7 @@ export default {
   background: #f3f1f1e1;
   height: auto;
   text-align: center;
+  position: relative;
 }
 
 .footerCopyright {
@@ -58,6 +59,9 @@ export default {
 }
 
 .footerScroll {
+  position: relative;
+  z-index: 600;
+  top: -8px;
   height: 20pt;
   width: 20pt;
 }

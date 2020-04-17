@@ -140,7 +140,8 @@
 }
 
 .headerButton {
-  width: 34px;
+  width: 38px;
+  cursor: pointer;
 }
 
 </style>
