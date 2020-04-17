@@ -36,16 +36,23 @@ export default {
 <style scoped>
 .footerSection {
   width: 100%;
-  background: linear-gradient(#ffe4e1, #fff0f5);
+  background: #f3f1f1e1;
   height: auto;
   text-align: center;
 }
 
 .footerCopyright {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 0.95em;
   font-weight: bold;
-  font-size: 12pt;
-  text-shadow: 1px 2px 3px #808080;
+  color: #fff;
+  text-shadow:
+    0 0 0.05em #f06292,
+    0 0 0.1em #f06292,
+    0 0 0.15em #f06292,
+    0 0 0.3em #f06292;
+  filter: saturate(80%);
   margin: 0 auto;
   padding: 12px;
 }
