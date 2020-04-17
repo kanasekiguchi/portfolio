@@ -8,7 +8,7 @@
     </div>
     <img
       class="profilePicture"
-      src="@/assets/kana.jpg"
+      src="@/assets/kana2.jpg"
     >
   </div>
 </template>
@@ -20,10 +20,11 @@
 <style scoped>
 .mainSection {
   width: 100%;
-  background: linear-gradient(#ffe4e1, #fff0f5);
+  background: linear-gradient(#fff0f5, #ffe4e1);
   height: auto;
-  text-align: center;
   line-height: 2em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .userName {
@@ -32,18 +33,23 @@
   text-shadow: 1px 2px 3px #808080;
   display: inline-block;
   border-bottom: 1px solid #9c9797;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .companyName {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 18pt;
   text-shadow: 1px 2px 3px #808080;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .profilePicture {
   width: 100px;
   height: 100px;
-  text-align: center;
   border-radius: 50%;
+  margin: 0 auto;
+  padding: 10px;
 }
 </style>
