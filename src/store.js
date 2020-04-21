@@ -5,9 +5,12 @@ import axios from "axios";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    address: "",
-    zip: ""
+  state:{
+   users:[
+    {name: 'John', email:'john@example.com', age:22},
+    {name: 'Merry', email: 'merry@facebook.com',age:33},
+    {name: 'Ken', email: 'ken@amazon.com',age:29}
+   ]
   },
   mutations: {
     getAddress(state, zip, address) {

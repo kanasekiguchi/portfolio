@@ -2,18 +2,39 @@
   "skills": [
     {
       "category": "front-end",
-      "name": "HTML",
-      "score": 3
-    },
-    {
+      "skills":[
+      {
+       "name": "HTML",
+       "score": 27
+      },
+      {
+       "name":"css",
+       "score":27
+      },
+      {
+       "name":"Javascript",
+       "score":15
+      },
+      {
+       "name":"SCSS",
+       "score":10
+      },
+      {
+       "name":"Vue",
+       "score":20
+      }
+     ]
+  },
+  {
       "category": "back-end",
-      "name": "Java",
-      "score": 3
+      "skills":[],
+      "name":["Java", "Ruby", "RubyOnRalls", "MySQL"],
+      "score": [15, 15, 30, 15]
     },
     {
       "category": "devops",
-      "name": "github",
-      "score": 2
+      "name": ["Linux", "Node", "Git", "GitHub", "Firebase"],
+      "score": [27, 20, 20, 25, 15]
     }
   ]
 }

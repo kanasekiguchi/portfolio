@@ -6,6 +6,12 @@
     <About />
     <Skill />
     <Vision />
+    <div
+      v-for="(user, key) in users"
+      :key="key"
+    >
+      {{ user.name }} ({{ user.email }})
+    </div>
     <Footer />
   </div>
 </template>
@@ -30,6 +36,11 @@ export default {
   data() {
     return {
       skills: []
+    }
+  },
+  computed:{
+    users: function(){
+     return this.$store.state.users
     }
   },
   mounted () {
