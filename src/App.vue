@@ -6,11 +6,29 @@
     <About />
     <Skill />
     <Vision />
-    <div
-      v-for="(user, key) in users"
-      :key="key"
-    >
-      {{ user.name }} ({{ user.email }})
+    <div>
+      <ul>
+        <li
+          v-for="(user, key) in users"
+          :key="key"
+        >
+          {{ user.name }} ({{ user.email }})
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>
+        <button @click="increment">
+          UP
+        </button>
+      </p><h1>Count:{{ count }}</h1>
+      <h1>ユーザー一覧</h1>
+      <div
+        v-for="user in users"
+        :key="user.id"
+      >
+        {{ user.name }}
+      </div>
     </div>
     <Footer />
   </div>
@@ -38,15 +56,25 @@ export default {
       skills: []
     }
   },
-  computed:{
+
+  computed: {
     users: function(){
-     return this.$store.state.users
-    }
+      return this.$store.state.users
+      },
+    count: function(){
+      return this.$store.state.count
+      }
   },
-  mounted () {
+    mounted () {
     this.getSkills();
+    this.$store.dispatch('getUsers')
   },
+
   methods: {
+    increment : function(){
+      this.$store.commit('increment'),
+      this.$store.dispatch('incrementOne')
+    },
     getSkills() {
       console.log('abc')
       // dataのスキルを初期化する

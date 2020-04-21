@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import store from '@/store.js'
+import store from './store.js'
 
 console.log(store.state.count) // -> 0
 // incrementをコミットする
@@ -21,6 +21,7 @@ Vue.use(smoothScroll)
 Vue.config.productionTip = false
 
 new Vue({
+  store,
   render: h => h(App),
 }).$mount('#app')
 
