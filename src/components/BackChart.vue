@@ -43,8 +43,8 @@ export default {
     getChartName(){
       const names = this.$store.getters.skillName(1)
       this.data.labels = names
-      const scores = this.$store.getters.skillScore()
-      this.data.datasets[1].data = scores
+      const scores = this.$store.getters.skillScore(1)
+      this.data.datasets[0].data = scores
     }
   }
 }

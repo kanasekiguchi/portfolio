@@ -44,7 +44,7 @@ export default {
       const names = this.$store.getters.skillName(2)
       this.data.labels = names
       const scores = this.$store.getters.skillScore(2)
-      this.data.datasets[2].data = scores
+      this.data.datasets[0].data = scores
     }
   }
 }
