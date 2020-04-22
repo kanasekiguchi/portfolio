@@ -6,36 +6,41 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state:{
-    count: 0,
-    users:[
-      {name: 'John', email:'john@example.com', age:22},
-      {name: 'Merry', email: 'merry@facebook.com',age:33},
-      {name: 'Ken', email: 'ken@amazon.com',age:29}
-    ]
+    skills:[],
+    loaded: false
   },
   mutations: {
-    increment:function(state){
-      state.count++
-    },
-    getAddress(state, zip, address) {
-      state.zip = zip;
-      state.address = address;
-    },
-    setUsers : function(state,users) {
-      state.users = users
+    setSkills:function(state,skills){
+     state.skills = skills
+     state.loaded = true
     }
   },
-  actions:{
-    incrementOne: function(context){
-      setTimeout(() => {
-        context.commit('increment')
-      }, 3000)
-    },
-    getUsers: function({commit}){
+  actions: {
+    getSkills: function({commit}){
       return axios.get('https://us-central1-kanasekiguchi1009.cloudfunctions.net/skills')
-          .then(response => {
-            commit('setUsers',response.data)
+        .then(response => {
+          commit('setSkills',response.data)
+        })
+      }
+    },
+    getters: {
+      skillName:(state) => (index)=>{
+        const skillNameArray =[]
+        if(state.skills[index]){
+          state.skills[index].skill.forEach((Skill) =>{
+            skillNameArray.push(Skill.name)
           })
+        }
+        return skillNameArray
+      },
+      skillScore: (state) => (index)=>{
+        const skillScoreArray =[]
+        if(state.skills[index]){
+          state.skills[index].skillforEach((Score) =>{
+            skillScoreArray.push(Score.score)
+          })
+        }
+        return skillScoreArray
+      }
     }
-  }
-});
+})
