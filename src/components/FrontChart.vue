@@ -8,11 +8,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'Javascript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [27, 27, 15, 10,20],
+            data: [],
             backgroundColor: [
               'rgba(255, 0, 0, 0.2)'
             ],
@@ -33,13 +32,22 @@ export default {
           }
         },
         legend: {
-          display: false,
+          display: false
         }
       }
     }
   },
   mounted () {
+    this.getChartName()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getChartName(){
+      const names = this.$store.getters.skillName(0)
+      this.data.labels = names
+      const scores = this.$store.getters.skillScore(0)
+      this.data.datasets[0].data = scores
+    }
   }
 }
 </script>

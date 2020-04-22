@@ -2,34 +2,9 @@
   <div id="app">
     <Header />
     <Main />
-    <div>{{ this.skills }}</div>
     <About />
     <Skill />
     <Vision />
-    <div>
-      <ul>
-        <li
-          v-for="(user, key) in users"
-          :key="key"
-        >
-          {{ user.name }} ({{ user.email }})
-        </li>
-      </ul>
-    </div>
-    <div>
-      <p>
-        <button @click="increment">
-          UP
-        </button>
-      </p><h1>Count:{{ count }}</h1>
-      <h1>ユーザー一覧</h1>
-      <div
-        v-for="user in users"
-        :key="user.id"
-      >
-        {{ user.name }}
-      </div>
-    </div>
     <Footer />
   </div>
 </template>
@@ -51,49 +26,44 @@ export default {
     Vision,
     Footer,
   },
-  data() {
-    return {
-      skills: []
-    }
-  },
+  // data() {
+  //   return {
+  //     skills: []
+  //   }
+  // },
 
-  computed: {
-    users: function(){
-      return this.$store.state.users
-      },
-    count: function(){
-      return this.$store.state.count
-      }
-  },
+  // computed: {
+  //   users: function(){
+  //     return this.$store.state.skills
+  //     },
+  //   count: function(){
+  //     return this.$store.state.count
+  //     }
+  // },
     mounted () {
-    this.getSkills();
-    this.$store.dispatch('getUsers')
+    this.$store.dispatch('getSkills')
   },
 
-  methods: {
-    increment : function(){
-      this.$store.commit('increment'),
-      this.$store.dispatch('incrementOne')
-    },
-    getSkills() {
-      console.log('abc')
-      // dataのスキルを初期化する
-      this.skills = [];
-      // this.skillsを一時変数のitemsに参照コピーする
-      let items = this.skills;
-      // axios.getを用いてデプロイ済のfunctionにアクセスする
-      this.axios.get('https://us-central1-kanasekiguchi1009.cloudfunctions.net/skills')
-        .then((response) => {
-          response.data.forEach(function(skill) {
-            // 取得したデータを１件ずつ配列に設定する
-            items.push(skill);
-          })
-        })
-        .catch((e) => {
-          alert(e);
-        });
-    }
-  }
+  // //methods: {
+  //   getSkills() {
+  //     console.log('abc')
+  //     // dataのスキルを初期化する
+  //     this.skills = [];
+  //     // this.skillsを一時変数のitemsに参照コピーする
+  //     let items = this.skills;
+  //     // axios.getを用いてデプロイ済のfunctionにアクセスする
+  //     this.axios.get('https://us-central1-kanasekiguchi1009.cloudfunctions.net/skills')
+  //       .then((response) => {
+  //         response.data.forEach(function(skill) {
+  //           // 取得したデータを１件ずつ配列に設定する
+  //           items.push(skill);
+  //         })
+  //       })
+  //       .catch((e) => {
+  //         alert(e);
+  //       });
+  //   }
+  // }
 }
 </script>
 
