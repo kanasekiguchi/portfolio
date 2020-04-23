@@ -30,12 +30,10 @@
  import Menu from './Menu.vue'
  export default {
   name: 'App',
-  _components: {
+  components: {
     Menu
   },
-  get components() {
-    return this._components
-  },
+
   data(){
     return {
       check: false
@@ -140,7 +138,8 @@
 }
 
 .headerButton {
-  width: 34px;
+  width: 38px;
+  cursor: pointer;
 }
 
 </style>

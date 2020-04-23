@@ -9,8 +9,9 @@
         の三つを大事にして頑張ります！<br>
         自分が作ったもので人を笑顔にしたいし、幸せにしたいです。<br>
         今はチャートの形も小さく歪ですが、ここから大きく綺麗なチャートを目指し努力していきます。
-        HTMLやCSSは個人的に興味があるので少しだけ数値を高めに設定しました！<br>
-        また、ポートフォリオを作成している中でデザインにも興味が湧いてきました。
+        数値については現在の興味で表しました。
+        HTMLやCSSは個人的に興味があるので少しだけ数値を高めに設定しています！<br>
+        ポートフォリオを作成している中でデザインにも興味が湧いてきました。
       </p>
     </div>
     <div>
@@ -21,25 +22,28 @@
       >https://github.com/kanasekiguchi</a>
     </div>
     <div class="skillCategories">
-      <ul>
+      <ul id="hover">
         <li>
           <label
             class="Front"
-            @click="frontChange"
+            :class="{'front-change':isFrontActive}"
+            @click="setCurrentChart('Front')"
           >Front-end
           </label>
         </li>
         <li>
           <label
             class="Back"
-            @click="backChange"
+            :class="{'back-change':isBackActive}"
+            @click="setCurrentChart('Back')"
           >Back-end
           </label>
         </li>
         <li>
           <label
             class="DevOps"
-            @click="devChange"
+            :class="{'dev-change':isDevOpsActive}"
+            @click="setCurrentChart('DevOps')"
           >DevOps
           </label>
         </li>
@@ -48,7 +52,7 @@
     <div class="skillList">
       <ul
         id="Front-end"
-        :class="{'front-Change': Front_end}"
+        :class="{'front-Change': isFrontActive}"
       >
         <li>HTML</li>
         <li>CSS</li>
@@ -58,7 +62,7 @@
       </ul>
       <ul
         id="Back-end"
-        :class="{'back-Change': Back_end}"
+        :class="{'back-Change': isBackActive}"
       >
         <li>Java</li>
         <li>Ruby</li>
@@ -67,7 +71,7 @@
       </ul>
       <ul
         id="DevOps"
-        :class="{'devops-Change': devchange}"
+        :class="{'devops-Change': isDevOpsActive}"
       >
         <li>Linux</li>
         <li>Node</li>
@@ -78,19 +82,19 @@
     </div>
     <div class="skillGraph">
       <div
-        v-if="Front_end"
+        v-if="isFrontActive && loaded"
         id="Graph"
       >
         <FrontChart />
       </div>
       <div
-        v-if="Back_end"
+        v-if="isBackActive"
         id="Graph"
       >
         <BackChart />
       </div>
       <div
-        v-if="devchange"
+        v-if="isDevOpsActive"
         id="Graph"
       >
         <DevOpsChart />
@@ -114,26 +118,26 @@
   },
   data() {
     return {
-      Front_end: true,
-      Back_end: false,
-      devchange: false,
+      currentChart: 'Front'
+    }
+  },
+  computed:{
+    isFrontActive(){
+      return this.currentChart=='Front';
+    },
+    isBackActive(){
+      return this.currentChart=='Back';
+    },
+    isDevOpsActive(){
+      return this.currentChart=='DevOps';
+    },
+    loaded(){
+      return this.$store.state.loaded
     }
   },
   methods: {
-    frontChange(){
-      this.Front_end=!this.Front_end,
-      this.Back_end= false,
-      this.devchange=false
-    },
-    backChange(){
-      this.Front_end= false,
-      this.Back_end=!this.Back_end,
-      this.devchange=false
-    },
-    devChange(){
-      this.Front_end= false,
-      this.Back_end= false,
-      this.devchange=!this.devchange
+    setCurrentChart(chart){
+      this.currentChart = chart;
     }
   }
 }
@@ -173,7 +177,7 @@ li {
 
 .gitHubLabel {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12pt;
+  font-size: 13pt;
   font-weight: bold;
   color: rgb(99, 79, 97);
   margin: 0 auto;
@@ -183,6 +187,7 @@ li {
 
 .gitHuburl {
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13pt;
   font-weight: bold;
   color: rgb(99, 79, 97);
   text-decoration: none;
@@ -201,21 +206,27 @@ li {
   color: #f34949;
   font-size: 18px;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
+  margin: 2.5px;
+  border: dashed 2px #ff7b7b;
 }
 
 .Back {
   color: #2bc05f;
   font-size: 18px;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
+  margin: 2.5px;
+  border: dashed 2px #92db8b;
 }
 
 .DevOps {
   color: #9839d3;
   font-size: 18px;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
+  margin: 2.5px;
+  border: dashed 2px #afabeb;
 }
 
 .front-Change li {

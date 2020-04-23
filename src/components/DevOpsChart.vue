@@ -7,11 +7,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Linux', 'Node', 'Git', 'GitHub', 'Firebase'],
+        labels: [],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [27, 20, 20, 25, 15],
+            data: [],
             backgroundColor: [
               'rgba(115, 51, 155, 0.2)',
             ],
@@ -31,13 +30,22 @@ export default {
           }
         },
         legend: {
-          display: false,
+          display: false
         }
       }
     }
   },
   mounted () {
+    this.getChartName()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getChartName(){
+      const names = this.$store.getters.skillName(2)
+      this.data.labels = names
+      const scores = this.$store.getters.skillScore(2)
+      this.data.datasets[0].data = scores
+    }
   }
 }
 </script>

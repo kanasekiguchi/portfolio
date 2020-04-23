@@ -7,11 +7,10 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRalls', 'MySQL'],
+        labels: [],
         datasets: [
           {
-            label: 'Radar Dataset',
-            data: [15, 15, 30, 15],
+            data: [],
             backgroundColor: [
               'rgba(15, 145, 60, 0.2)',
             ],
@@ -31,13 +30,22 @@ export default {
           }
         },
         legend: {
-          display: false,
+          display: false
         }
       }
     }
   },
   mounted () {
+    this.getChartName()
     this.renderChart(this.data, this.options)
+  },
+  methods:{
+    getChartName(){
+      const names = this.$store.getters.skillName(1)
+      this.data.labels = names
+      const scores = this.$store.getters.skillScore(1)
+      this.data.datasets[0].data = scores
+    }
   }
 }
 </script>
