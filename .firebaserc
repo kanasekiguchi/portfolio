@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "kanasekiguchi1009"
+  },
+  "targets": {
+    "kanasekiguchi1009": {
+      "hosting": {
+        "portfolio": [
+          "kanasekiguchi1009"
+        ]
+      }
+    },
+    "devportfolio-62aff": {
+      "hosting": {
+        "portfolio": [
+          "devportfolio-62aff"
+        ]
+      }
+    }
   }
 }
